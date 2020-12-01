@@ -1,3 +1,4 @@
+import backendcode as b
 import threading
 try:
     def CRD():
@@ -14,13 +15,13 @@ try:
                 print("Error : Enter Valid Key name")
             print("Enter Time of Expiry for the file (in seconds)")
             timeofexpiry=int(input())
-            create(filename,content,timeofexpiry)
+            b.create(filename,content,timeofexpiry)
         if(n==2):
             filename=input("Enter File Name")
-            read(filename)
+            b.read(filename)
         if(n==4):
             filename=input("Enetr File name")
-            delete(filename)
+            b.delete(filename)
     
 try:
     t1 = threading.Thread(target=CRD(), args=(5,))  #creating  multithread  
