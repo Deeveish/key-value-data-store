@@ -22,6 +22,8 @@ try:
         if(n==4):
             filename=input("Enetr File name")
             b.delete(filename)
+except Exception as e:
+        print(e)
     
 try:
     t1 = threading.Thread(target=CRD(), args=(5,))  #creating  multithread  
